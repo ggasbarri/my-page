@@ -27,14 +27,7 @@
 
           <v-container fill-width class="title mt-4">Skills</v-container>
 
-          <v-layout class="pb-5 pl-4 pr-4">
-            <v-container v-for="(skill, index) in skills" xs3 :key="index">
-              <v-avatar color="primary">
-                <v-icon dark>{{ skill.icon }}</v-icon>
-              </v-avatar>
-              <div>{{ skill.title }}</div>
-            </v-container>
-          </v-layout>
+          <CircleList v-bind:items="skills" :has-titles="true"></CircleList>
         </v-card>
       </v-flex>
     </v-layout>
@@ -42,26 +35,32 @@
 </template>
 
 <script>
+import CircleList from "@/components/CircleList";
 export default {
   name: "MainCard",
+  components: { CircleList },
   data() {
     return {
       skills: [
         {
           title: "Android",
-          icon: "mdi-android-head"
+          icon: "mdi-android-head",
+          color: "primary"
         },
         {
           title: "VueJS",
-          icon: "mdi-vuejs"
+          icon: "mdi-vuejs",
+          color: "primary"
         },
         {
           title: "Django",
-          icon: "mdi-language-python"
+          icon: "mdi-language-python",
+          color: "primary"
         },
         {
-          title: "UI/UX",
-          icon: "mdi-material-design"
+          title: "UI / UX",
+          icon: "mdi-material-design",
+          color: "primary"
         }
       ]
     };
@@ -71,11 +70,11 @@ export default {
 
 <style scoped>
 .avatar {
-  margin-top: -400px;
+  margin-top: -580px;
   z-index: 1;
 }
 .main-card {
-  margin-top: -200px;
+  margin-top: -300px;
   z-index: -2;
 }
 .main-title {
