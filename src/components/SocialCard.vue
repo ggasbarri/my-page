@@ -5,7 +5,11 @@
         <v-card>
           <v-card-title class="display-1">
             <v-container fill-width>My Networks</v-container>
-            <CircleList :has-titles="false" v-bind:items="networks"/>
+            <CircleList
+              :is-clickable="true"
+              :has-titles="false"
+              v-bind:items="networks"
+            />
           </v-card-title>
         </v-card>
       </v-flex>
@@ -17,7 +21,7 @@
 import CircleList from "@/components/CircleList";
 export default {
   name: "SocialCard",
-  components: {CircleList},
+  components: { CircleList },
   data() {
     return {
       networks: [
@@ -44,10 +48,10 @@ export default {
         {
           icon: "mdi-medium",
           color: "#292929",
-          url: "https://medium.com/@gifrgas"
+          url: "https://medium.com/@gincos"
         }
       ]
-    }
+    };
   }
 };
 </script>
