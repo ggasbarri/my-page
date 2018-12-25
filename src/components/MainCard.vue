@@ -7,7 +7,7 @@
 
     <!-- Card -->
     <v-layout class="main-card">
-      <v-flex xs12 sm10 md8 lg4 offset-sm1 offset-md2 offset-lg4>
+      <v-flex>
         <v-card>
           <v-card-title center class="main-title display-2 pb-0" primary-title>
             <v-container fill-width>Hey, I'm Gianfranco!</v-container>
@@ -27,7 +27,11 @@
 
           <v-container fill-width class="title mt-4">Skills</v-container>
 
-          <CircleList v-bind:items="skills" :has-titles="true"></CircleList>
+          <CircleList
+            class="pb-5 pt-3"
+            v-bind:items="skills"
+            :has-titles="true"
+          ></CircleList>
         </v-card>
       </v-flex>
     </v-layout>
@@ -53,13 +57,18 @@ export default {
           color: "primary"
         },
         {
-          title: "Django",
+          title: "Python",
           icon: "mdi-language-python",
           color: "primary"
         },
         {
           title: "UI / UX",
           icon: "mdi-material-design",
+          color: "primary"
+        },
+        {
+          title: "AI",
+          icon: "mdi-brain",
           color: "primary"
         }
       ]
@@ -70,11 +79,10 @@ export default {
 
 <style scoped>
 .avatar {
-  margin-top: -580px;
   z-index: 1;
 }
 .main-card {
-  margin-top: -300px;
+  margin-top: -100px;
   z-index: -2;
 }
 .main-title {

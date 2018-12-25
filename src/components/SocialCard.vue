@@ -1,16 +1,26 @@
 <template>
   <div>
-    <v-layout>
-      <v-flex xs12 sm10 md8 lg4 offset-sm1 offset-md2 offset-lg4>
+    <div
+      v-show="this.$vuetify.breakpoint.lgAndUp"
+      style="margin-top: 120px;"
+    ></div>
+    <v-layout class="social-card">
+      <v-flex>
         <v-card>
+          <!-- Social Networks -->
           <v-card-title class="display-1">
             <v-container fill-width>My Networks</v-container>
             <CircleList
+              class="pb-2 pt-3"
               :is-clickable="true"
               :has-titles="false"
               v-bind:items="networks"
             />
           </v-card-title>
+
+          <!-- Latest Medium Pub -->
+          <div class="display-1 text-xs-center">Last Post</div>
+          <LastMediumPub class="pb-5"></LastMediumPub>
         </v-card>
       </v-flex>
     </v-layout>
@@ -19,9 +29,10 @@
 
 <script>
 import CircleList from "@/components/CircleList";
+import LastMediumPub from "@/components/LastMediumPub";
 export default {
   name: "SocialCard",
-  components: { CircleList },
+  components: { LastMediumPub, CircleList },
   data() {
     return {
       networks: [
@@ -56,4 +67,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.social-card {
+  margin-top: -20px;
+}
+</style>
