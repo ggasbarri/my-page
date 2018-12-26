@@ -8,7 +8,7 @@
       row
       wrap
     >
-      <v-flex xs10 md8 lg4>
+      <v-flex xs10 md8 lg6>
         <PolicyDetailCard
           style="width: 100%"
           class="pb-5 mb-4"

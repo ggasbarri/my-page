@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Avatar -->
-    <v-avatar size="200px" class="avatar elevation-10">
+    <v-avatar size="200px" color="white" class="avatar elevation-10">
       <img alt="Avatar" src="../assets/myphoto.jpg" />
     </v-avatar>
 
