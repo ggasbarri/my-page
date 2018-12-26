@@ -15,15 +15,14 @@
             <router-link to="/" class="mr-4 title" style="color: white;"
               >Home</router-link
             >
-            <router-link
-              to="/policies"
-              class="mr-4 title"
-              style="color: white;"
+            <router-link to="/policies" class="mr-4 title" style="color: white;"
               >Policies</router-link
             >
           </nav>
         </v-layout>
       </v-parallax>
+
+      <!-- Content -->
       <v-content class="ma-0 pa-0"> <router-view></router-view> </v-content>
 
       <!-- Footer -->
@@ -58,7 +57,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -83,6 +82,6 @@ export default {
   height: 100%;
   width: 100%;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 </style>

@@ -27,6 +27,21 @@ export default new Router({
       name: "policy-detail",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/PolicyDetail.vue")
+    },
+
+    // Not Found
+    {
+      path: "/404",
+      name: "not-found",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/PageNotFound.vue")
+    },
+
+    {
+      path: "*",
+      redirect: {
+        name: "not-found"
+      }
     }
   ]
 });
