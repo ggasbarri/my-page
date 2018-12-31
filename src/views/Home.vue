@@ -8,10 +8,10 @@
       row
       wrap
     >
-      <v-flex xs10 lg4>
+      <v-flex xs12 sm10 lg4>
         <MainCard style="width: 100%" class="pb-5 mb-4"></MainCard>
       </v-flex>
-      <v-flex xs10 offset-xs0 lg4 :class="socialLeftMargin">
+      <v-flex xs12 sm10 offset-xs0 lg4 :class="socialLeftMargin">
         <SocialCard style="width: 100%" class="pb-5 mb-4"></SocialCard>
       </v-flex>
     </v-layout>
