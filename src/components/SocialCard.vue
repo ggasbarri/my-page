@@ -44,7 +44,7 @@ export default {
         {
           icon: "mdi-twitter",
           color: "#00b2ff",
-          url: "https://twitter.com/gifrgas"
+          url: "https://twitter.com/ggasba"
         },
         {
           icon: "mdi-github-circle",
