@@ -16,8 +16,12 @@
             Mobile Developer &<br />
             Machine Learning Enthusiast
           </v-container>
+            
+          <img src="https://badges.devskiller.com/badges/2SY4ToTvXJsdLIUm4doP07.png" 
+          style="margin: auto; width: 120px; cursor: pointer;" class="pb-2"
+          @click="openInNewTab('https://devskiller.com/hr-certification/2SY4ToTvXJsdLIUm4doP07')"/>
 
-          <v-card-text class="subheading mt-4 pl-4 pr-4">
+          <v-card-text class="subheading mt-2 pl-4 pr-4">
             Venezuelan student who found love for programming and software
             engineering. Expertise on Mobile Development and related UI/UX
             Design. Writer at Medium. Cinephile. Philanthropist. Love Dan
@@ -73,7 +77,12 @@ export default {
         }
       ]
     };
-  }
+  },
+  methods: {
+    openInNewTab(url){
+      window.open(url, '_blank')
+    }
+  },
 };
 </script>
 
