@@ -1,7 +1,13 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import {
+  //Button,
+  Card,
+  Container,
+  Row,
+  Col,
+} from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -116,7 +122,9 @@ class Profile extends React.Component {
                   <div className="text-center mt-sm-7 mt-xs-4">
                     <h3>
                       Gianfranco Gasbarri{" "}
-                      <span className="font-weight-light">, {this.calculateAge()}</span>
+                      <span className="font-weight-light">
+                        , {this.calculateAge()}
+                      </span>
                     </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
@@ -131,15 +139,15 @@ class Profile extends React.Component {
                     <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
-                        Hi! I'm Gian,
-                        a Mobile Applications and Machine Learning Engineer.
-                        I started my software career building Android Applications, 
-                        a task I have always loved. Afterwards, my path took me through 
-                        positions including Flutter Development and later turning 
-                        into Data Science for a startup. Finally, at the time 
-                        I'm leveraging all my experiences through different areas 
-                        to empower software products made for humans, always making 
-                        sure to keep the learning up! 
+                          Hi! I'm Gian, a Mobile Applications and Machine
+                          Learning Engineer. I started my software career
+                          building Android Applications, a task I have always
+                          loved. Afterwards, my path took me through positions
+                          including Flutter Development and later turning into
+                          Data Science for a startup. Finally, at the time I'm
+                          leveraging all my experiences through different areas
+                          to empower software products made for humans, always
+                          making sure to keep the learning up!
                         </p>
                       </Col>
                     </Row>
