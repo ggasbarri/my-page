@@ -229,7 +229,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.linkedin.com/in/gianfranco-gasbarri/"
+                      href="https://www.linkedin.com/in/ggasbarri"
                       id="tooltip333589074"
                       target="_blank"
                     >
