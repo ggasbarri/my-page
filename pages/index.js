@@ -1,3 +1,4 @@
+import PageHead from "../components/PageHead";
 import React from "react";
 
 // reactstrap components
@@ -10,10 +11,10 @@ import {
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import SimpleFooter from "components/Footers/SimpleFooter.js";
+import DemoNavbar from "../components/DemoNavbar.js";
+import SimpleFooter from "../components/SimpleFooter.js";
 
-class Profile extends React.Component {
+class Home extends React.Component {
   calculateAge() {
     const birthday = "1998-10-06";
     const ageDifMs = Date.now() - new Date(birthday).getTime();
@@ -28,6 +29,7 @@ class Profile extends React.Component {
   render() {
     return (
       <>
+        <PageHead />
         <DemoNavbar />
         <main className="profile-page" ref="main">
           <section className="section-profile-cover section-shaped my-0">
@@ -70,9 +72,10 @@ class Profile extends React.Component {
                           onClick={(e) => e.preventDefault()}
                         >
                           <img
-                            alt="..."
+                            alt="My Personal Photo"
                             className="rounded-circle"
-                            src={require("assets/img/theme/photo.jpg")}
+                            layout="fill"
+                            src="/img/theme/photo.jpg"
                           />
                         </a>
                       </div>
@@ -163,4 +166,4 @@ class Profile extends React.Component {
   }
 }
 
-export default Profile;
+export default Home;
