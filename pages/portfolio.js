@@ -28,7 +28,8 @@ class Portfolio extends React.Component {
 
   async makeRequest() {
     try {
-      const projects = fetch("/api/projects");
+      const response = await fetch("/api/projects");
+      const projects = await response.json();
       this.setState({
         items: projects.projectCollection.items,
       });
@@ -73,7 +74,7 @@ class Portfolio extends React.Component {
           <section className="section">
             <Container>
               {this.state.items.map((item) => (
-                <div>{item.title}</div>
+                <div key={item.title}>{item.title}</div>
               ))}
             </Container>
           </section>
