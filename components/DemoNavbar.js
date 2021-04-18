@@ -99,9 +99,27 @@ class DemoNavbar extends React.Component {
                   ) : null}
 
                   {this.state.currentRoute !== "/portfolio" ? (
-                    <NavItem>
+                    /*<NavItem>
                       <NavLink href="/portfolio">Portfolio</NavLink>
-                    </NavItem>
+                    </NavItem>*/
+                    <div>
+                      <UncontrolledDropdown nav id="nav-portfolio">
+                        <DropdownToggle nav>
+                          <i className="ni ni-ui-04 d-lg-none mr-1" />
+                          <span className="nav-link-inner--text">
+                            Portfolio
+                          </span>
+                        </DropdownToggle>
+                      </UncontrolledDropdown>
+                      <UncontrolledPopover
+                        trigger="hover"
+                        placement="bottom"
+                        target="nav-portfolio"
+                        nav
+                      >
+                        <PopoverBody>Coming soon!</PopoverBody>
+                      </UncontrolledPopover>
+                    </div>
                   ) : null}
 
                   <UncontrolledDropdown nav id="nav-policies">
