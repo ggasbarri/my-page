@@ -13,8 +13,6 @@ import {
 import DemoNavbar from "../components/DemoNavbar.js";
 import SimpleFooter from "../components/SimpleFooter.js";
 
-import Contentful from "../contentful/Contentful.js";
-
 class Portfolio extends React.Component {
   state = {
     items: [],
@@ -28,21 +26,15 @@ class Portfolio extends React.Component {
     this.makeRequest();
   }
 
-  contentful = new Contentful();
-
-  makeRequest() {
-    this.contentful
-      .getPortfolioItems()
-      .then((response) => response.json())
-      .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        } else {
-          this.setState({
-            items: data.projectCollection.items,
-          });
-        }
+  async makeRequest() {
+    try {
+      const projects = fetch("/api/projects");
+      this.setState({
+        items: projects.projectCollection.items,
       });
+    } catch (error) {
+      // TODO: handle error
+    }
   }
 
   render() {
