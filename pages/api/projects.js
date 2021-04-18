@@ -18,7 +18,7 @@ export default async (req, res) => {
       }
         `;
 
-  const results = await fetch(
+  const response = await fetch(
     `https://graphql.contentful.com/content/v1/spaces/ofcgwyjms7pq/`,
     {
       method: "POST",
@@ -29,5 +29,8 @@ export default async (req, res) => {
       body: JSON.stringify({ query }),
     }
   );
-  res.json(results);
+
+  const data = (await response.json()).data;
+
+  res.json(data);
 };
